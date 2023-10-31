@@ -362,6 +362,8 @@ swin2_standard_model_ft = copy.deepcopy(swin2_standard_model_ch)
 
 swin2_standard_model_ft = freeze_all_layers(swin2_standard_model_ft)
 
+swin2_standard_model_ft = unfreeze_classifier(swin2_standard_model_ft)
+
 swin2_standard_model_ft = unfreeze_stage(swin2_standard_model_ft, 3)
 
 swin2_standard_model_ft = unfreeze_stage(swin2_standard_model_ft, 2)
